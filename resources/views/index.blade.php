@@ -1,3 +1,7 @@
-Hello im a blade template
+<div>
+    im a blade template
+</div>
 
-my name is: {{ $name }}
+@isset($name)
+    <div>name is: {{ $name }}</div>
+@endisset
