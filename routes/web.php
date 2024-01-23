@@ -17,10 +17,12 @@ Route::get('/', function () {
     return 'Main Page';
 });
 
+// tagging/naming route
 Route::get('/xxx', function () {
     return 'Hello';
 })->name('hello');
 
+// how to route with name
 Route::get('/', function () {
     return redirect()->route('hello');
 });
