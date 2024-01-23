@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Main Page';
+    return view('index', [
+        'name' => 'Laravel',
+    ]);
 });
 
 // tagging/naming route
@@ -23,9 +25,9 @@ Route::get('/xxx', function () {
 })->name('hello');
 
 // how to route with name
-Route::get('/', function () {
-    return redirect()->route('hello');
-});
+// Route::get('/', function () {
+//     return redirect()->route('hello');
+// });
 
 Route::get('/greet{name}', function ($name) {
     return 'Hello' . $name . '!';
